@@ -1,37 +1,73 @@
-## Welcome to GitHub Pages
+#packages:
+ >Packages are a way of structuring Python’s module namespace by using “dotted module names”. For example, the module name A.B designates a submodule named B in a package named A. Just like the use of modules saves the authors of different modules from having to worry about each other’s global variable names, the use of dotted module names saves the authors of multi-module packages like NumPy or Pillow from having to worry about each other’s module names.
 
-You can use the [editor on GitHub](https://github.com/321910306037/programs/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+#pip in python:
+it is used to install , uninstall and we can do many things with pip 
+>format:python -m pip list [options]
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+###options:
+>-o, --outdated
+List outdated packages
 
-### Markdown
+>-u, --uptodate
+List uptodate packages
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+>-e, --editable
+List editable projects.
 
-```markdown
-Syntax highlighted code block
+>-l, --local
+If in a virtualenv that has global access, do not list globally-installed packages.
 
-# Header 1
-## Header 2
-### Header 3
+>--user
+Only output packages installed in user-site.
 
-- Bulleted
-- List
+>--path <path>
+Restrict to the specified installation path for listing packages (can be used multiple times).
 
-1. Numbered
-2. List
+>--pre
+Include pre-release and development versions. By default, pip only finds stable versions.
 
-**Bold** and _Italic_ and `Code` text
+>--format <list_format>
+Select the output format among: columns (default), freeze, or json
 
-[Link](url) and ![Image](src)
-```
+>--not-required
+List packages that are not dependencies of installed packages.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+>--exclude-editable
+Exclude editable package from output.
 
-### Jekyll Themes
+>--include-editable
+Include editable package from output.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/321910306037/programs/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+>--exclude <package>
+Exclude specified package from the output
 
-### Support or Contact
+####Users of the package can import individual modules from the package.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+##there are some of the examples of  packages
+###for printing fibanocci series
+> import fibo
+>fib = fibo.fib
+>fib(500)
+>0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
+
+Users of the package can import individual modules from the package, for example:
+
+###for sound
+>import sound.effects.echo
+>sound.effects.echo.echofilter(input, output, delay=0.7, atten=4)
+
+###for arrays:
+>import numpy as np
+a = np.arange(15).reshape(3, 5)
+print(a)
+
+###for images and videos AI
+>import cv2  
+cv2.imread('dog.jpg',1)  
+cv2.imshow('image',img)  
+cv2.waitKey()    
+cv2.destroyAllWindows() 
+
+###for tables statistics
+>pandas.DataFrame( data, index, columns, dtype, copy)
